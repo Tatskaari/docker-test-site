@@ -10,7 +10,4 @@ node {
     stage('docker build') {
         sh 'sudo docker build -t test-site .'
     }   
-    stage('docker re-deploy'){
-        sh 'sudo docker kill $(sudo docker ps -q --filter ancestor=test-site )'
-    }
 }
